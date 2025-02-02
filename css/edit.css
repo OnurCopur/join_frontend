@@ -1,0 +1,287 @@
+#addTask-edit{
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #FFFFFF;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1.5rem;
+    border-radius: 30px;
+    z-index: 999;
+    height: 600px;
+  }
+
+  .input-container-edit{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .input-container-edit label{
+    color: #425262;
+  }
+
+  .addTask-edit-top{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    height: 600px;
+    overflow-y: auto;
+    overflow-x:clip;
+    scrollbar-width:thin;
+  }
+
+  #addTask-edit-description{
+    height: 60px;
+    outline-color: #29ABE2;
+    border: 1px solid #D1D1D1;
+  }
+
+  #addTask-edit-title{
+    outline-color: #29ABE2;
+    border: 1px solid #D1D1D1;
+  }
+
+  .addTask-edit-bottom{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 30px;
+    gap: 20px;
+  }
+
+  .save-button{
+    background-color: #2A3647;
+    color: #FFFFFF;
+    width: 80px;
+    cursor: pointer;
+    height: 50px;
+    border: none !important;
+    font-size: 16px !important;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+  }
+
+  .fa-check{
+    margin-bottom: 2px;
+  }
+  
+  .save-button:hover{
+    background-color: #29ABE2;
+  }
+
+  .back-button{
+    background-color: transparent;
+    height: 36px;
+    width: 55px;
+    cursor: pointer;
+    border: 1px solid #2A3647;
+    font-size: 16px !important;
+  }
+  
+  .back-button:hover{
+    border-color: #29ABE2;
+    color: #29ABE2;
+  }
+  
+
+  .input-section-edit{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .input-section-element label{
+    color: #425262;
+  }
+  
+
+  .input-section-element-edit{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .Priority-title{
+    color: #425262;
+  }
+
+  .input-section-right-edit{
+    width: 440px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .input-section-left-edit{
+    width: 440px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .input-edit{
+    border: 1px solid #D1D1D1;
+    border-radius: 10px;
+    padding:11px;
+    background-color: white;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 20px;
+  }
+
+  .input-edit-subtask{
+    border: 1px solid #D1D1D1;
+    border-radius: 10px;
+    padding: 12px 16px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .prio-edit-buttons{
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+  }
+  
+  .prio-edit-buttons button{
+    width: 128px;
+    height: 26px;
+    border: none;
+    border-radius: 10px;
+    padding: 20px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    background-color: transparent;
+    border: 1px solid #E7E7E7;
+    cursor: pointer;
+  }
+
+  .prio-edit-buttons button:hover{
+    box-shadow: 0px 4px 2px 0 rgba(17, 3, 3, 0.24);
+  }
+  
+  .urgent-edit-button:focus, .urgent-edit-button.active{
+    background-color: #FF3d00;
+    color: #FFFFFF;
+  }
+  
+  .medium-edit-button:focus, .medium-edit-button.active{
+    background-color: #FFA800;
+    color: #FFFFFF;
+  }
+  
+  .low-edit-button:focus, .low-edit-button.active{
+    background-color: #7AE229;
+    color: #FFFFFF;
+  }
+
+  .close-edit-btn{
+    color: #2A3647;
+    font-size: 20px !important;
+    font-weight: 100;
+    cursor: pointer;
+    padding: 5px 7px 0px 7px;
+    height: 36px;
+  }
+
+  .urgentImg-edit{
+    background-color: white;
+  }
+
+  .user-content-edit-letter{
+    display: flex;
+    gap: 10px;
+    margin-left: 7px;
+  }
+
+  #newSubtask{
+    padding-inline-start: 0;
+  }
+
+  .plus-icon-edit-subtasks{
+    cursor: pointer;
+  }
+
+  .checkbox-edit-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 15px;
+  }
+
+  .checkbox-edit-content:hover{
+    background-color: #EEEEEE;
+    .subtasks-icon-hidden {
+      visibility: visible;
+  }
+  }
+
+  .input-subtask-edit-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: white;
+    border-bottom: 1px solid #005DFF;
+    border-radius: 0;
+    padding: 4px 16px 4px 16px;
+  }
+
+  .input-subtask-edit-content:hover{
+    background-color: #FFFFFF;
+  }
+
+  .edit-buttons-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .editInputBoard{
+    border: none;
+    outline: none;
+    font-size: 18px;
+    font-weight: 400;
+    color: #425262;
+  }
+
+  #newSubtask{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .contact-container-edit-focus {
+    background-color: #2A3647;
+    color: white !important;
+
+    .contact-container-check {
+        background-image: url('/img/checkedbuttonWhite.svg');
+    }
+  }
+
+  .contact-container-edit-focus:hover {
+    background-color: #091931 !important;
+  }

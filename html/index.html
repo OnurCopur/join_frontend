@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join</title>
+    <link rel="icon" type="image/x-icon" href="/img/joinlogo.png">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/include.js"></script>
+    <script src="/js/register.js"></script>
+    <script src="/js/storage.js"></script>
+    <script src="/js/summary.js"></script>
+</head>
+<body onload="onloadFunc()">
+   <div class="main">
+        <div class="content">
+            <div class="header">
+                <div class="logoPlaceholder">
+                    <img class="joinlogoAnimation animationLogo" src="/img/joinlogo.png" id="logo">
+                    <img class="joinlogoAnimation animationLogo logoMobile" src="/img/joinlogo2.png" id="logo2">
+                </div>    
+                <div class="sign_up_container fade-in" id="signUpContainer">
+                    <p class="signUpText">Not a Join user?</p>
+                    <button class="sign_up_button" onclick="changeForm()">Sign up</button>
+                </div>
+            </div>
+
+            <div id="formFadeIn" class="formLinksContainer fade-in">
+                <div id="form" class="form">
+                    <div class="formHeadline">
+                        <h1 class="formHeadlineText">Log in</h1>
+                        <div class="formHeadlineBorder"></div>
+                    </div>
+                    <form class="mailPassword" onsubmit="login(); return false;">    
+                            <div>
+                                <input class="inputMail" type="email" id="email-login" placeholder="Email" required>
+                            </div>
+                            <div>
+                                <input class="inputPassword" type="password" id="password-login" placeholder="Password" required>
+                            </div>
+                        
+                        <div class="notification">
+                            <p id="msgbox"></p>
+                        </div>  
+                        <div id="checkboxSignUp" class="loginCheckbox">
+                            <input type="checkbox" class="loginCheckBoxRememberMe" id="loginCheckBoxRememberMe">
+                            <label for="loginCheckBoxRememberMe" class="loginCheckBoxRememberMeLabel"></label>
+                            <p class="loginCheckBoxRememberMeSpan">Remember me</label>
+                        </div>
+                        <div class="buttons">
+                            <button class="buttonLogin" type="submit" >Log in</button>
+                            <button class="buttonGuest" type="button" onclick="redirectToSummary()">Guest Log in</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="signUpMobile" id="signUpContainer">
+                    <p class="signUpText">Not a Join user?</p>
+                    <button class="sign_up_button" onclick="changeForm()">Sign up</button>
+                </div>
+            </div>
+                <div class="footer">
+                    <a class="footerLinks" onclick="redirectToPrivacyPoliceSignup()">Privacy Policy</a>
+                    <a class="footerLinks" onclick="redirectToLegalNoticeSignup()">Legal notice</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

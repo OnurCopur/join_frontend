@@ -1,0 +1,143 @@
+<div class="content">
+
+    <div class="addTask">
+
+        <div class="addTask-top">
+
+            <h2 class="addTask-title">Add Task</h2>
+
+            <div class="input-section">
+
+                <div class="input-section-left">
+                    <!-- TITLE -->
+                    <div class="input-section-element">
+                        <label for="addTask-title">Title<span style="color: #FF8190">*</span></label>
+                        <div class="input-container-required">
+                            <div id="addTask-title" onclick="hideRequiredInfo('addTask-title', 'required-title')"
+                                class="input-container" tabindex="1">
+                                <input id="taskTitle" class="inputfield" type="text" placeholder="Enter a title"
+                                    required>
+                            </div>
+                            <span id="required-title" class="required-text transparent">This field is required</span>
+                        </div>
+                    </div>
+                    <!-- DESCRIPTION -->
+                    <div class="input-section-element">
+                        <label for="addTask-description">Description</label>
+                        <div id="input-container-description" class="input-container input-container-description">
+                            <textarea id="addTask-description" class="textarea-description"
+                                placeholder="Enter a Description"></textarea>
+                            <img src="/img/textarea.svg" alt="">
+                        </div>
+                    </div>
+                    <!-- ASSIGNED TO -->
+                    <div id="input-section-element" class="input-section-element">
+                        <label for="addTask-assigned">Assigned to</label>
+                        <div id="contacts-input-container" onclick="openContacts()"
+                            class="input-container input-container-select" tabindex="1">
+                            <input id="addTask-assigned" onkeyup="searchContacts()" class="inputfield" type="text"
+                                placeholder="Select contacts to assign" onfocus="this.placeholder = ''"
+                                onblur="this.placeholder = 'Select contacts to assign'">
+                            <img id="dropdown-img-contacts" onclick="openCloseContacts(event)" class="dropdown-img"
+                                src="/img/arrow_drop_down.svg">
+                        </div>
+                        <div id="selectedContacts" class="contact-circles d-none"></div>
+                        <div id="addTask-contacts-container" class="addTask-contacts-container d-none"></div>
+                    </div>
+                </div>
+
+                <div class="parting-line line-page"></div>
+
+                <div class="input-section-right">
+                    <!-- DUE DATE -->
+                    <div class="input-section-element">
+                        <label for="addTask-dueDate">Due Date<span style="color: #FF8190">*</span></label>
+                        <div class="input-container-required">
+                            <div id="addTask-dueDate" onclick="hideRequiredInfo('addTask-dueDate', 'required-date')"
+                                class="input-container">
+                                <input id="taskDate" class="inputfield" type="date" placeholder="dd/mm/yyyy" required>
+                                <img src="/img/event.svg">
+                            </div>
+                            <span id="required-date" class="required-text transparent">This field is required</span>
+                        </div>
+                    </div>
+                    <!-- PRIO -->
+                    <div class="input-section-element">
+                        <span>Prio</span>
+                        <div class="prio-buttons">
+                            <button id="urgentButton" onclick="selectUrgent()" class="urgentButton">
+                                <span>Urgent</span>
+                                <div class="urgentImg"></div>
+                            </button>
+                            <button id="mediumButton" onclick="selectMedium()" class="mediumButton">
+                                <span>Medium</span>
+                                <div class="mediumImg"></div>
+                            </button>
+                            <button id="lowButton" onclick="selectLow()" class="lowButton">
+                                <span>Low</span>
+                                <div class="lowImg"></div>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- CATEGORY -->
+                    <div class="input-section-element">
+                        <label for="addTask-category">Category<span style="color: #FF8190">*</span></label>
+                        <div id="addTask-category-section" onclick="openCategoriesWindow()" class="addTask-category-section">
+                            <div id="addTask-category"
+                                class="input-container input-container-category input-container-select">
+                                <span id="select-task-text" class="inputfield">Select task category</span>
+                                <img id="dropdown-img-category" onclick="openCategories(event)" class="dropdown-img" src="/img/arrow_drop_down.svg">
+                            </div>
+                            <div id="addTask-category-container" class="d-none">
+                                <span id="technicalTask" onclick="selectCategory('technicalTask')"
+                                    class="single-Category">Technical Task</span>
+                                <span id="userStory" onclick="selectCategory('userStory')" class="single-Category">User Story</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- SUBTASKS -->
+                    <div class="input-section-element">
+                        <label for="addTask-subtasks">Subtasks</label>
+                        <div id="addTask-subtasks-container" class="input-container">
+                            <input id="addTask-subtasks" onkeypress="addSubtaskEnter()" onclick="openIcons()" class="inputfield" type="text"
+                                placeholder="Add new subtask">
+                            <div id="addTask-subtasks-icons" class="subtasks-icon d-none">
+                                <img onclick="emptySubtaskInput()" src="/img/closeVectorBlack.svg" alt="Löschen">
+                                <div class="parting-line subtasks-icon-line"></div>
+                                <img id="add-subtask-button" onclick="addSubtask()" src="/img/done.svg" alt="Bestätigen">
+                            </div>
+                            <img id="dropdown-img-plus" onclick="addSubtask()" class="dropdown-img dropdown-img-plus"
+                                src="/img/subtasks.svg">
+                        </div>
+                        <div id="subtasks-list" class="subtasks-list"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="addTask-bottom">
+            <span class="required-bottom"><span style="color: #FF8190">*</span>This field is required</span>
+            <div class="addTask-bottom-buttons">
+
+                <button id="clearButton" onclick="clearAddTask()">
+                    <span>Clear</span>
+                    <div class="closeImg"></div>
+                </button>
+
+                <button id="createTaskButton" onclick="createTask()">
+                    <span>Create Task</span>
+                    <img src="/img/check-white.svg" alt="Bestätigen">
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="added-container" class="added-container d-none">
+        <div id="task-added">
+            Task added to board
+            <img src="/img/board.svg" alt="">
+        </div>
+    </div>
+
+</div>

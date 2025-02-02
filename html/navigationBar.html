@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/navBarHeader.css">
+    <link rel="stylesheet" href="/css/navBarHeaderResponsive.css">
+    <script src="/js/include.js"></script>
+</head>
+<body>
+    <div class="main">
+        <div class="sideMenu">
+            <div>
+                <img class="logo" src="/img/joinlogo2.png">
+            </div>
+            <div class="navBar-container">
+                <div class="linksNav" onclick="redirectToSummary()" id="summary">
+                    <img class="navImage" src="/img/summary.png">
+                    <p>Summary</p> 
+                </div>
+                <div class="linksNav" onclick="redirectToAddTask()" id="addTaskMenu">
+                    <img  class="navImage"src="/img/addTask.png">
+                    <p>Add Task</p>
+                </div>
+                <div class="linksNav" onclick="redirectToBoard()" id="board">
+                    <img  class="navImage"src="/img/board.png">
+                    <p>Board</p>
+                </div>
+                <div class="linksNav" onclick="redirectToContact()" id="contacts">
+                    <img  class="navImage"src="/img/contact.png">
+                    <p>Contacts</p>
+                </div>
+            </div>
+            <div class="links-container">
+                <div class="links" id="privacyPolice"><a class="link" href="./privacyPolice.html">Privacy Police</a></div>
+                <div class="links" id="legalNotice"><a class="link" href="./legalNotice.html">Legal notice</a></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

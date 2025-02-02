@@ -1,0 +1,723 @@
+body {
+    margin: 0;
+    width: 100%;
+    background-color: #F6F7F8;
+    font-family: "Inter", sans-serif;
+    animation: mymove 1.2s;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    width: 1440px;
+    max-height: 1024px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 63.5px;
+}
+
+.logoPlaceholder {
+    width: 177px;
+    height: 208px;
+    position: relative;
+    top: 67px;
+    left: 75px;
+}
+
+.joinlogoAnimation {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;;
+}
+
+.logoMobile {
+    display: none;
+}
+
+.animationLogo {
+    animation: shrinkAndMove 800ms ease-in-out forwards; /* Verwende die Animation */
+    animation-delay: 800ms; /* Verzögerung der Animation um 1 Sekunde */
+}
+
+@keyframes shrinkAndMove {
+    0% {
+        width: 274px;
+        height: 334.07px;
+    }
+    100% {
+        width: 100.03px;
+        height: 121.97px;
+        top: 110px;
+        left: 110px;
+    }
+}
+
+.sign_up_container {
+    position: absolute;
+    top: 67px;
+    right: 75px;
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    width: 279px;
+    height: 49px;
+}
+
+.signUpMobile {
+    display: none;
+}
+
+.sign_up_button {
+    font-size: 16px;
+    font-weight: 700;
+    width: 91px;
+    height: 49px;
+    border-radius: 8px;
+    border: none;
+    padding: 15px 16px 15px 16px;
+    gap: 10px;
+    background-color: #2A3647;
+    color: white;
+    cursor: pointer;
+}
+
+.sign_up_button:hover {
+    background-color: #29ABE2;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    transition: 0.2s;
+}
+
+.signUpText {
+    font-size: 20px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 652px;
+    height: 493px;
+    border-radius: 30px;
+    background-color: white;
+    margin-top: 250px;
+    margin-bottom: 100px;
+}
+
+.vector {
+    position: relative;
+    right: 130px;
+    top: 65px;
+    cursor: pointer;
+    padding: 3px;
+}
+
+.vector:hover {
+    background-color: lightgrey;
+    border-radius: 50%;
+    scale: 1.1;
+}
+
+.formHeadline {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.formHeadlineText {
+    font-size: 61px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 73.2px;
+    font-weight: bold;
+    margin-bottom: 16px;
+    margin-top: 20px;
+}
+
+.formHeadlineBorder {
+    width: 150px;
+    border-bottom: 3px solid #29abe2;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+.mailPassword {
+    display: flex;
+    flex-direction: column;
+}
+
+.inputMail {
+    width: 422px;
+    height: 48px;
+    margin: 16px;
+    background-image: url(/img/mail.png);
+    background-repeat: no-repeat;
+    background-position: 377px 16px;
+    border: 1px solid #d1d1d1;
+    border-radius: 10px;
+    text-indent: 21px;
+}
+
+.inputPassword {
+    width: 422px;
+    height: 48px;
+    margin: 16px 16px 4px 16px;
+    background-image: url(/img/lock.png);
+    background-repeat: no-repeat;
+    background-position: 377px 16px;
+    border: 1px solid #d1d1d1;
+    border-radius: 10px;
+    text-indent: 21px;
+    line-height: 20px;
+}
+
+.input,
+input::placeholder {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #d1d1d1;
+    transform: translateY(10%);
+}
+
+input {
+    cursor: pointer;
+}
+
+.formLinksContainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+.logInButton {
+    margin-bottom: 48px;
+}
+
+.notification {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    height: 20px;
+    margin-left: 32px;
+    margin-bottom: 10px;
+}
+
+#msgbox {
+    color: red;
+}
+
+#msgbox-signup {
+    color: red;
+}
+
+.loginCheckbox {
+    margin-left: 39px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+#exampleCheck1 {
+    width: 20px;
+    height: 20px;
+}
+
+.checkText {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+input[id="loginCheckBoxRememberMe"] + label {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #2a3647;
+    border-radius: 3px;
+    cursor: pointer;
+
+}
+
+input[id="loginCheckBoxRememberMe"] {
+    display: none;
+}
+
+input[id="loginCheckBoxRememberMe"]:checked + label:after {
+    position: relative;
+    content: "\2714";
+    font-size: 24px;
+    top: -12px;
+}
+
+.loginCheckBoxRememberMeLabel {
+    margin-right: 5px;
+    margin-top: -1px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    margin-bottom: 48px;
+}
+
+.buttonLogin {
+    width: 110px;
+    height: 48px;
+    border-radius: 8px;
+    background-color: #2A3647;
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 21px;
+    border: none;
+    cursor: pointer;
+}
+
+.buttonLogin:hover {
+    background-color: #29ABE2;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    transition: 0.2s;
+}
+
+.buttonGuest {
+    width: 177px;
+    height: 48px;
+    border: 1px solid #2A3647;
+    border-radius: 8px;
+    background-color: #FFFFFF;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 25.2px;
+    cursor: pointer;
+}
+
+.buttonGuest:hover {
+    border: 2px solid #29abe2;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    transition: 0.2s;
+}
+
+.footer {
+    display: flex;
+    gap: 35px;
+    margin-bottom: 48px;
+    height: 100%;
+    align-items: end;
+}
+
+.footerLinks {
+    cursor: pointer;
+    text-decoration: none;
+    color: #A8A8A8;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.footerLinks:hover {
+    color: #29ABE2;
+    scale: 1.1;
+}
+
+.fade-in {
+    animation: fadeIn 1.2s;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  80% {opacity: 0;}
+  100% { opacity: 1; }
+}
+
+.formSignUp {
+    width: 598px;
+    height: 630px;
+    margin-top: 155px;
+    margin-bottom: 60px;
+}
+
+.loginCheckboxSignUp {
+    margin-left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.policeLink {
+    font-size: 16px;
+    color: #29ABE2;
+}
+
+.privacy-text {
+    color: #a8a8a8;
+}
+
+.policeLink:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.inputNameSignUp {
+    width: 422px;
+    height: 48px;
+    margin: 10px;
+    background-image: url(/img/person.png);
+    background-repeat: no-repeat;
+    background-position: 377px 16px;
+    border: 1px solid #d1d1d1;
+    border-radius: 10px;
+    text-indent: 21px;
+}
+
+.inputMailSignUp {
+    width: 422px;
+    height: 48px;
+    margin: 10px;
+    background-image: url(/img/mail.png);
+    background-repeat: no-repeat;
+    background-position: 377px 16px;
+    border: 1px solid #d1d1d1;
+    border-radius: 10px;
+    text-indent: 21px;
+}
+
+.inputPasswordSignUp {
+    width: 422px;
+    height: 48px;
+    margin: 10px;
+    background-image: url(/img/lock.png);
+    background-repeat: no-repeat;
+    background-position: 377px 16px;
+    border: 1px solid #d1d1d1;
+    border-radius: 10px;
+    text-indent: 21px;
+}
+
+.formHeadlineTextSignUp {
+    font-size: 61px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 73.2px;
+    font-weight: bold;
+    margin-bottom: 16px;
+    margin-top: 20px;
+}
+
+.d-none {
+    display: none !important;
+}
+
+@media (max-width: 720px) {
+    .form {
+        width: 396px;
+        height: 515px;
+        margin-bottom: 50px;
+        margin-top: 0;
+    }
+
+    .inputMail {
+        width: 364px;
+        height: 48px;
+        background-position: 329px 16px;
+    }
+
+    .inputPassword {
+        width: 364px;
+        height: 48px;
+        background-position: 329px 16px;
+    }
+
+    .formHeadlineText {
+        font-size: 47px;
+    }
+
+    .formHeadlineBorder {
+        width: 88px;
+    }
+
+    .buttons {
+        margin-bottom: 32px;
+        flex-direction: column;
+        gap: 16px;
+        align-items: center;
+    }
+
+    .buttonLogin {
+        width: 177px;
+    }
+
+    .sign_up_container {
+        display: none;
+    }
+
+    .joinlogoAnimation {
+        width: 100.03px;
+        height: 121.97px;
+    }
+
+    .logoPlaceholder {
+        width: 64px;
+        height: 78.03px;
+    }
+
+    @keyframes shrinkAndMove {
+        0% {
+            width: 100.03px;
+            height: 121.97px;
+        }
+        100% {
+            width: 64px;
+            height: 78.03px;
+            top: 60px;
+            left: 60px;
+        }
+    }
+
+    .signUpMobile {
+        display: flex;
+        align-items: center;
+        gap: 35px;
+        width: 279px;
+        height: 49px;
+        display: flex;
+        margin-bottom: 26px;
+    }
+
+    .footer {
+        margin-bottom: 24px;
+        margin-top: 48px;
+    }
+
+    @keyframes mymove {
+        0% {
+            background-color: rgba(42, 54, 71, 1);
+        }
+        80% {
+            background-color: rgba(42, 54, 71, 1);
+        }
+        100% {
+            background-color: #F6F7F8;
+        }
+      }
+
+
+    .content {
+        max-height: 926px;
+    }
+
+    .formLinksContainer {
+        height: auto;
+        margin-top: 150px;
+    }
+}
+
+@media (max-width: 450px) {
+    .form {
+        width: 290px;
+        height: 515px;
+        margin-bottom: 50px;
+        margin-top: 0;
+    }
+
+    .inputMail {
+        width: 264px;
+        height: 48px;
+        background-position: 229px 16px;
+    }
+
+    .inputPassword {
+        width: 264px;
+        height: 48px;
+        background-position: 229px 16px;
+    }
+
+    .content {
+        max-height: 650px;
+    }
+
+    .formLinksContainer {
+        margin-top: 120px;
+    }
+}
+
+
+@media (max-width: 380px) {
+    .form {
+        width: 290px;
+        height: 415px;
+        margin-bottom: 32px;
+        margin-top: 0;
+    }
+
+    .inputMail {
+        width: 248px;
+        height: 40px;
+        background-position: 219px 12px;
+    }
+
+    .inputPassword {
+        width: 248px;
+        height: 40px;
+        background-position: 219px 10px;
+    }
+
+    .joinlogoAnimation {
+        width: 48px;
+        height: 48px;
+    }
+
+    @keyframes shrinkAndMove {
+        0% {
+            width: 100.03px;
+            height: 121.97px;
+        }
+        100% {
+            width: 48px;
+            height: 48px;
+            top: 60px;
+            left: 60px;
+        }
+    }
+
+    .notification {
+        margin-bottom: 0;
+        margin-left: 16px;
+    }
+
+    #msgbox {
+        font-size: 12px;
+        margin-top: 16px;
+    }
+
+    .inputPassword{
+        margin: 16px 16px 0px 16px;
+    }
+
+    .inputMail {
+        margin: 0px 16px 0px 16px;
+    }
+
+    .formHeadlineText {
+        margin-block-start: 0;
+        margin-block-end: 0;
+    }
+
+    .buttons {
+        margin-bottom: 0;
+    }
+
+    .footer {
+        margin-top: 24px;
+    }
+}
+
+@media (max-width: 720px) {
+    .formSignUp {
+        height: 600px;
+    }
+
+    .formHeadlineTextSignUp {
+        font-size: 47px;
+        margin-block-start: 0;
+        margin-block-end: 0;
+
+    }
+
+    .inputNameSignUp {
+        width: 364px;
+        height: 48px;
+        background-position: 329px 16px;
+    }
+
+    .inputMailSignUp {
+        width: 364px;
+        height: 48px;
+        background-position: 329px 16px;
+    }
+
+    .inputPasswordSignUp {
+        width: 364px;
+        height: 48px;
+        background-position: 329px 16px;
+    }
+
+    .vector {
+        right: 88px;
+        top: 50px;
+    }
+}
+
+@media (max-width: 450px) {
+    .formSignUp {
+        height: 600px;
+    }
+
+    .inputNameSignUp {
+        width: 264px;
+        height: 48px;
+        margin: 8px 16px 0px 16px;
+        background-position: 239px 16px;
+    }
+
+    .inputMailSignUp {
+        width: 264px;
+        height: 48px;
+        margin: 16px 16px 0px 16px;
+        background-position: 239px 16px;
+    }
+
+    .inputPasswordSignUp {
+        width: 264px;
+        height: 48px;
+        margin: 16px 16px 0px 16px;
+        background-position: 239px 16px;
+    }
+
+    .vector {
+        right: 56px;
+    }
+}
+
+@media (max-width: 380px) {
+    .formSignUp {
+        height: 490px;
+    }
+
+    .vector {
+        right: 32px;
+        top: 48px
+    }
+
+    .headline {
+        margin-top: -32px;
+    }
+
+    .loginCheckboxSignUp {
+        margin-bottom: 0;
+    }
+
+    .footer {
+        margin-top: 0;
+    }
+
+    .vector {
+        right: 46px;
+    }
+}

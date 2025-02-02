@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/navBarHeader.css">
+    <link rel="stylesheet" href="/css/navBarHeaderResponsive.css">
+    <script src="/js/include.js"></script>
+    <script src="/js/register.js"></script>
+    <script src="/js/storage.js"></script>
+</head>
+<body>
+    <div class="header">
+        <div class="headerLogoMedia">
+            <img class="headerLogoMedia" src="/img/joinlogo.png">
+        </div>
+        <div class="headline">
+            <p>Kanban Project Management Tool</p>
+        </div>
+        <div class="headerInfo" id="headerInfo">   
+            <div class="helpUser">
+                <img class="helpImage" src="/img/help.png" onclick="redirectToHelp()">
+            </div>    
+            <div class="headerLogoutButton" onclick="toggleMenu()">
+                <div class="ellipseInitials">
+                    <span class="userInitials" id="userInitials"></span>
+                </div>
+                <div class="dropdownMenu d-none">
+                    <a href="#" id="help" onclick="redirectToHelp()">Help</a>
+                    <a href="#" id="pp" onclick="redirectToPrivacyPolice()">Privacy Police</a>
+                    <a href="#" id="ln" onclick="redirectToLegalNotice()">Legal Notice</a>
+                    <a href="#" id="logout" onclick="logout()">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

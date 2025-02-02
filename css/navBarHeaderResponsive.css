@@ -1,0 +1,105 @@
+/* Header */
+
+@media screen and (max-width: 850px) {
+    .headerMainContainer {
+        left: 0 !important;
+    }
+
+    #hHPP {
+        display: none;
+    }
+}
+
+@media (max-width: 850px ) {
+    .headline {
+        left: 16px;
+    }
+}
+
+@media (max-width: 650px ) {
+    .headline {
+        display: none;
+    }
+
+    .helpUser {
+        display: none;
+    }
+
+    #help {
+        display: block;
+    }
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .headerLogoMedia {
+        display: block;
+        width: 32px !important;
+        height: 39px !important;
+        padding-left: 10px;
+    }
+
+    .headerLogoutButton {
+        width: 48px;
+        height: 48px;
+        margin-right: 0;
+    }
+
+    .helpMedia {
+        display: block;
+    }
+}
+
+
+/* NavBar */
+
+
+@media (max-width: 850px) {
+    .sideMenu {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        height: 80px;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .links-container {
+        display: none;
+    }
+
+    .navBar-container {
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        margin-bottom: 0 !important;
+        margin-top: 3px;
+        flex-direction: unset;
+        z-index: 100;
+    }
+    
+    .linksNav {
+        width: auto !important;
+        flex-direction: column;
+        border-radius: 16px;
+        width: 80px !important;
+        height: 76px !important;
+        justify-content: center;
+        gap: 0;
+    }
+
+    .navImage {
+        margin: 0;
+            width: 30px;
+            height: 30px;
+    	}
+
+    .linksNav p {
+        margin-block-start: 8px;
+        margin-block-end: 0px;
+    }
+}        

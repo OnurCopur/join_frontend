@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacts</title>
+    <link rel="icon" type="image/x-icon" href="/img/joinlogo.png">
+    <script src="/js/contacts.js"></script>
+    <script src="/js/include.js"></script>
+    <script src="/js/register.js"></script>
+    <script src="/js/storage.js"></script>
+    <script src="/js/contactsEditAndDelete.js"></script>
+    <link rel="stylesheet" href="/css/navBarHeader.css">
+    <link rel="stylesheet" href="/css/contacts.css">
+    <link rel="stylesheet" href="/css/contactsResponsive.css">
+</head>
+<body onload="init()">
+    <div w3-include-html="/html/header.html"></div>
+    <div w3-include-html="/html/navigationBar.html"></div>
+
+    <div id="overlay" class="overlay"></div>
+    <div id="dialogNewContactDiv" class="dialogNewContactDiv"></div>
+    <div class="contactsMainDiv">
+        <div class="contactsLeftSide">
+            <div class="addNewContactDiv">
+                <button onclick="addNewContact()" class="addContactButton">
+                    <b class="addNewContactHeadline">Add new contact</b>
+                    <img class="addPersonPng" src="/img/person_add.png">
+                </button>
+            </div>
+            <div id="contactList" class="contactList">
+            </div>
+        </div>
+    </div>
+    <div id="contactsRightSideMainDivId" class="contactsRightSideMainDiv">
+        <div id="contactsRightSide" class="contactsRightSide contactsRightSideMainDiv.slide-in">
+            <div class="contactsHeadlineAndLeftIconDiv">
+            <h1 class="contactsHeadlineRightSection">Contacts</h1>
+                <img onclick="goBackResponsive()" class="backLogoResponsive" src="/img/arrow-left-line.png">
+            </div>
+                <div class="lineRightSection"></div>
+                <p class="contactsRightBetterWith">Better with a team</p>
+        </div>
+        <div id="contactsRightSectionShowProfil" class="contactsRightSectionShowProfil">
+        </div>
+    </div>
+</body>
+</html>

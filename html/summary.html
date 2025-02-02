@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summary</title>
+    <link rel="stylesheet" href="/css/navBarHeader.css">
+    <link rel="stylesheet" href="/css/navBarHeaderResponsive.css">
+    <link rel="stylesheet" href="/css/summary.css">
+    <link rel="icon" type="image/x-icon" href="/img/joinlogo.png">
+    <script src="/js/include.js"></script>
+    <script src="/js/register.js"></script>
+    <script src="/js/summary.js"></script>
+    <script src="/js/storage.js"></script>
+    <script src="/js/board.js"></script>
+</head>
+<body onload="initSummary()">
+    <div w3-include-html="/html/navigationBar.html"></div>
+    <div w3-include-html="/html/header.html"></div>
+    
+
+    <section class="content" id="content">
+        <div class="header-summary">
+            <div><span class="headline-summary">Join 360</span></div>
+            <div class="vertical-line"></div>
+            <span class="span-headline">Key Metrics at a Glance</span>
+            <div class="horizontal-line-mobile"></div>
+        </div>
+        <div class="summary-greeting">
+            <div class="summary-container">
+                <div class="toDo-Done">
+                    <div class="to-do" onclick="redirectToBoard()">
+                        <div>
+                            <img class="summary-images" src="/img/pencil.png">
+                        </div>
+                        <div class="to-do-span">
+                            <span class="number" id="todoCounter">0</span>
+                            <span class="summary-text">To-do</span>
+                        </div>
+                </div>
+                    <div class="to-do-lc done" onclick="redirectToBoard()">
+                        <div>
+                            <img class="summary-images" src="/img/check_summary.png">
+                        </div>
+                        <div class="to-do-span">
+                            <span class="number" id="doneCounter">0</span>
+                            <span class="summary-text">Done</span>
+                        </div>
+                    </div>
+                </div>
+                    <div class="summary-board" onclick="redirectToBoard()">
+                        <div>
+                            <img class="summary-images-urgency" src="/img/urgency.png">
+                        </div>
+                        <div class="to-do-span-urgency">
+                            <span class="number" id="urgentCount">0</span>
+                            <span class="urgent-text">urgent</span>
+                        </div>
+                        <div class="summary-board-border"></div>
+                        <div class="summary-board-span">
+                            <span class="summary-board-time" id="summaryUrgentTaskNextDate">April 27, 2024</span>
+                            <span id="summaryUrgentTaskInfo">Upcoming Deadline</span>
+                        </div>
+                    </div>
+
+                <div class="task-progress-feedback">
+                    <div class="tpf-container" onclick="redirectToBoard()">
+                        <span class="number" id="tasksInBoardNum">0</span>
+                        <span class="summary-text">Tasks in</span>
+                        <span class="summary-text">Board</span>
+                    </div>
+                    <div class="tpf-container" onclick="redirectToBoard()">
+                        <span class="number" id="taskInProgressNum">0</span>
+                        <span class="summary-text">Tasks in</span>
+                        <span class="summary-text">Progress</span>
+                    </div>
+                    <div class="tpf-container" onclick="redirectToBoard()">
+                        <span class="number" id="awaitingFeedbackNum">0</span>
+                        <span class="summary-text">Awaiting</span>
+                        <span class="summary-text">Feedback</span>
+                    </div>
+                </div>
+            </div>
+            <div class="greeting">
+                <span class="daytime" id="daytimeGreeting"></span>
+                <span class="guest-name" id="nameGreeting"></span>
+            </div>
+        </div>
+    </section>
+    <div class="greeting-mobile" id="greeting-mobile">
+        <span class="daytime" id="daytimeGreetingMobile"></span>
+        <span class="guest-name" id="nameGreetingMobile"></span>
+    </div>
+</body>
+</html>

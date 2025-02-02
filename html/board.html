@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/img/joinlogo.png" />
+    <title>Board</title>
+    <link rel="stylesheet" href="/css/board.css" />
+    <link rel="stylesheet" href="/css/boardResponsiv.css">
+    <link rel="stylesheet" href="/css/edit.css" />
+    <link rel="stylesheet" href="/css/addTask.css">
+    <link rel="stylesheet" href="/css/addTaskInputs.css">
+    <link rel="stylesheet" href="/css/addTaskResponsive.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+
+  <body onload="initBoard()">
+    <div w3-include-html="/html/navigationBar.html"></div>
+    <div w3-include-html="/html/header.html"></div>
+    <section class="board-section">
+      <div class="board-content">
+        <div class="board-header">
+          <h1>Board</h1>
+          <div class="addTask-content">
+            <div class="search-content">
+              <input
+                type="text"
+                placeholder="Find Task"
+                id="search-input"
+                autocomplete="off"
+                onkeyup="searchTask()"
+              />
+              <div class="search-line-content">
+                <div class="line-content"></div>
+                <button class="search-btn" onclick="searchTask()">
+                  <i class="fa fa-search" id="search-icon"></i>
+                </button>
+              </div>
+            </div>
+            <div class="addTask-button" onclick="openAddTask()">
+              Add task
+              <i class="fa fa-plus" style="font-size: 24px"></i>
+            </div>
+            <div class="addTask-button-responsiv" onclick="checkwidthForAddTask()"><i class="fa fa-plus" style="font-size: 24px"></i></div>
+          </div>
+        </div>
+
+        <div id="addTask" class="addTaskBoard slide-in hidden">
+          <div w3-include-html="addTaskTemplate.html"></div>
+        </div>
+
+        <div w3-include-html="edit.html"></div>
+
+        <div class="board-management-content">
+          <div class="inner-management-content">
+            <div class="title-m-content"> 
+              <p class="title-m">To do</p>
+              <button onclick="updateButtonOnClick()" class="plus-btn">
+                <i class="fa fa-plus" style="font-size: 12px"></i>
+              </button>
+            </div>
+            <div id="noTask-toDo">
+              <p>No tasks to do</p>
+            </div>
+            <div id="newTask-toDo" ondrop="moveTo('To Do')" ondragover="allowDrop(event)">
+            </div>
+          </div>
+          <div class="inner-management-content">
+            <div class="title-m-content">
+              <p class="title-m">In progress</p>
+              <button onclick="updateButtonOnClick()" class="plus-btn">
+                <i class="fa fa-plus" style="font-size: 12px"></i>
+              </button>
+            </div>
+            <div id="noTask-inProgress">
+              <p id="inProgressText">No tasks to do</p>
+            </div>
+            <div id="newTask-inProgress" ondrop="moveTo('In progress')"
+            ondragover="allowDrop(event);"></div>
+          </div>
+          <div class="inner-management-content">
+            <div class="title-m-content">
+              <p class="title-m">Await feedback</p>
+              <button onclick="updateButtonOnClick()" class="plus-btn">
+                <i class="fa fa-plus" style="font-size: 12px"></i>
+              </button>
+            </div>
+            <div id="noTask-await">
+              <p>No tasks to do</p>
+            </div>
+            <div id="newTask-await" ondrop="moveTo('Await feedback')" ondragover="allowDrop(event);">
+            </div>
+          </div>
+          <div class="inner-management-content">
+            <div class="title-m-content">
+              <p class="title-m">Done</p>
+            </div>
+            <div id="noTask-done">
+              <p>No tasks to do</p>
+            </div>
+            <div id="newTask-done" ondrop="moveTo('Done')" ondragover="allowDrop(event)"></div>
+          </div>
+        </div>
+      </div>
+      
+      <div id="showTask" class="showTask slide-in hidden"></div>
+    </section>
+    <div class="overlay hidden" onclick="closeMe()"></div>
+    <script src="/js/contacts.js"></script>
+    <script src="/js/board.js"></script>
+    <script src="/js/boardEditContacts.js"></script>
+    <script src="/js/openTaskBorad.js"></script>
+    <script src="/js/openEditTaskBoard.js"></script>
+    <script src="/js/storage.js"></script>
+    <script src="/js/include.js"></script>
+    <script src="/js/addTask.js"></script>
+    <script src="/js/addTaskContacts.js"></script>
+    <script src="/js/addTaskSubtask.js"></script>
+    <script src="/js/summary.js"></script>
+    <script src="/js/register.js"></script>
+  </body>
+</html>

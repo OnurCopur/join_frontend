@@ -1,0 +1,628 @@
+@media (max-width: 1325px) {
+    .contactsRightSide {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        height: 104px;
+        width: 213px;
+        gap: 16px;
+        top: 160px;
+    }
+
+    .contactsHeadlineRightSection {
+        line-height: 56.4px;
+        font-weight: 700;
+        margin-block-start: 0;
+        margin-block-end: 0;
+    }
+
+    .lineRightSection {
+        height: 0;
+        width: 90px;
+        border-radius: 8px;
+        order: 2; 
+    }
+
+    .contactsRightBetterWith {
+        margin-block-start: 0;
+        margin-block-end: 0;
+        order: 1;
+    }
+
+    .closeResponsiveButton{
+        display:block;
+        position: absolute;
+        top: 20px;
+        left: 705px;
+        cursor: pointer;
+    }
+
+    .circleProfilPicShow{
+        font-size:40px;
+    }
+}
+
+@media(max-width:1250px){
+    .contactsRightSectionShowProfilInner{
+        flex-direction: column;
+
+    }
+
+    .circleProfilPicShowEdit{
+        position:absolute;
+        top:185px;
+    }
+
+    .circleProfilPicShowEdit{
+        width: 120px;
+        height: 120px;
+        font-size: 27px;
+        top:190px;
+    }
+
+    .proilNameAndEdit{
+        padding-left:0;
+    }
+
+    .nameProfilShow{
+        font-size: 27px;
+    }
+
+    .contactInformation{
+        font-size: 19px;
+    }
+
+    .dialogNewContactInnerDiv {
+        flex-direction: column;
+        width: 0px;
+    }
+
+    .dialogLeft{
+        width: 650px;
+        height: 352px;
+        border-top-right-radius: 30px;
+        border-bottom-left-radius: 0px;
+    }
+
+    .joinLogoDialog {
+        display: none;
+    }
+
+    .dialogRight {
+        width: 745px;
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 30px;
+        height: 420px;
+        
+    }
+
+    .dialogProfilPicture{
+        position:absolute;
+        top:190px;
+        background-color:transparent;
+        left:auto;
+    }
+
+    .dialogButtonDiv{
+        width:422px;
+        position:static;
+        display:flex;
+        justify-content: space-evenly;
+    }
+
+    .dialogProfilPictureDiv{
+        flex-direction: column;
+        height:455px;
+    }
+
+    .dialogAddData{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .dialogInputfield{
+        padding-bottom:30px;
+    }
+
+    .dialogNewContactDiv{
+        transform:translate(590px, -50%);
+    }
+
+    .dialogNewContactDiv.slide-in{
+        transform:translate(-365px, -50%)
+    }
+
+    .cancelButton{
+        display:none;
+    }
+
+    .profilEditandDeleteResponsive{
+        justify-content: center;
+        align-items: center;
+        width: 56px;
+        height: 56px;
+        border-radius: 56px;
+        background-color: #2A3647;
+        position: fixed;
+        top: calc(100% - 80px - 70px);
+        right: 30px;
+        cursor: pointer;
+        z-index: 2;
+    }
+}
+
+
+@media(max-width:1030px){
+    .addNewContactDiv{
+        width:395px;
+    }
+
+    .contactsLeftSide{
+        width:395px;
+    }
+
+    .contactsRightSide{
+        left:670px;
+    }
+
+    .contactsRightSectionShowProfil{
+        left:670px;
+    }
+}
+
+@media(max-width: 980px){
+    .addNewContactDiv{
+        width:250px;
+    }
+
+    .addContactButton{
+        gap:0;
+    }
+
+    .contactsLeftSide{
+        width: 310px;
+    }
+
+    .contactsRightSide{
+        left:575px;
+    }
+
+    .contactsRightSectionShowProfil{
+        left:575px;
+    }
+
+    .lineLeftSection{
+        width:80%;
+    }
+
+    .letter{
+        width:80% !important;
+    }
+
+    .contactListInner{
+        width:300px;
+    }
+
+    .circleProfilPic{
+        width: 37px;
+        height:37px;
+    }
+
+    .nameProfil{
+        font-size:18px;
+    }
+
+    .emailAdress{
+        font-size:15px;
+    }
+}
+
+@media(max-height:730px){
+    #contactsRightSectionShowProfil{
+        top:255px;
+    }
+
+    #contactsRightSide{
+        height:30px;
+    }
+
+}
+
+@media(max-height:700px){
+    .dialogNewContactDiv.slide-in {
+        transform: translate(-150px, -55%) !important;
+    }
+}
+
+
+@media(max-width:850px){
+    body{
+        overflow-x: hidden !important;
+    }
+
+    .contactsRightSideMainDiv{
+        position: fixed;
+    }
+
+    .contactsLeftSide{
+        left:0;
+        width:100vw;
+        position:absolute;
+        height: calc(115vh - 96px);
+    }
+
+    .addNewContactDiv{
+        width:52px;
+        height:52px;
+        right:25px;
+        bottom:100px;
+
+    }
+
+    .addContactButton{
+        border-radius:30px;
+        width:52px;
+        height:52px;
+    }
+
+    .contactList{
+        margin-top:0;
+    }
+
+    .letter{
+        width:80vw !important;
+    }
+
+    .lineLeftSection{
+        width:80%;
+    }
+
+    .contactListInner{
+        justify-content: center;
+        width:85%;
+    }
+
+
+    .addNewContactHeadline{
+        display:none;
+    }
+
+    .dialogNewContactInnerDiv{
+        flex-direction: column;
+        width:0px;
+    }
+
+    .dialogLeft{
+        width: 396px;
+        height:352px;
+        border-top-right-radius: 30px;
+        border-bottom-left-radius: 0px;
+    }
+
+    .dialogProfilPicture{
+        flex-direction: column;
+        position:absolute;
+        top:190px;
+        background-color:transparent;
+        left:auto;
+    }
+
+    .dialogRight{
+        width:492px;
+        border-top-right-radius: 0px;
+        border-bottom-left-radius:30px;
+        height:420px;
+    }
+
+    .dialogProfilPictureDiv{
+        height:455px;
+        flex-direction: column;
+    }
+
+    .dialogButtonDiv{
+        top:0;
+        left:0;
+        width:422px;
+        position:static;
+        display:flex;
+        justify-content: space-evenly;
+    }
+
+    .dialogProfilPictureDiv{
+        flex-direction: column;
+    }
+
+    .dialogNewContactDiv{
+        transform:translate(590px, -50%);
+    }
+
+    .dialogNewContactDiv.slide-in{
+        transform:translate(-240px, -65%)
+    }
+
+    .joinLogoDialog{
+        display:none;
+    }
+
+    .dialogAddData{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+
+    .dialogInputfield{
+        padding-bottom:30px;
+
+    }
+
+    .dialogButtonDiv{
+        width:420px;
+    }
+
+    .closeIcon{
+        color:white;
+    }
+
+    .contactsRightSideMainDiv{
+        transform:translateX(100vw);
+    }
+
+    .contactsRightSideMainDiv.slide-in{
+        transform: translateX(0px);
+    }
+
+    .contactsRightSide{
+        left:65px;
+        height:55px;
+        gap:6px;
+    }
+
+    .contactsRightSectionShowProfil{
+        left:65px;
+    }
+
+    .backLogoResponsive{
+        display:block;
+        width:32px;
+        height:32px;
+        top:10px;
+        left:590px;
+        cursor: pointer;
+    }
+
+    .contactsHeadlineAndLeftIconDiv{
+        width:80vw;
+        display:flex;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+
+    .circleProfilPicShow{
+        width:95px;
+        height:95px;
+        top:190px;
+    }
+
+    .proilNameAndEditInner{
+        display:none;
+    }
+
+    .editAndDeleteResponsive{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(42, 54, 71);
+        cursor: pointer;
+        transition: all 100ms ease-in-out;
+        gap: 16px;
+        border: 0px;
+        border-radius: 30px;
+        width: 52px;
+        height: 52px;
+        position: relative; 
+    }
+
+    .editAndDeleteResponsiveDivOutside{
+        width: 82vw;
+        display: flex;
+        justify-content: end;
+        height: 0;
+        align-items: end;
+    }
+
+    .editAndDeleteResponsive:hover{
+        background-color: rgb(80,171,226);
+        box-shadow: 0px 4px 4px 2px #2a262640;
+        border-color: rgb(80,171,226);
+    }
+
+    .popup{
+        display:none !important;
+        position: absolute;
+        bottom: 100%; 
+        right: 0; 
+        width: 116px;
+        height: 100px;
+        border-radius: 20px 20px 0 20px;
+        padding: 10px;
+        background: white;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        margin-right:25px;
+        display:flex;
+        flex-direction: column;
+        align-items: baseline;
+        
+    }
+
+    .profilEdit{
+        display:flex;
+        flex-direction: row;
+    }
+
+    .profilDelete{
+        display:flex;
+        flex-direction: row;
+    }
+
+    .closeResponsiveButton{
+        display:block;
+        position: absolute;
+        top: 25px;
+        left: 460px;
+    }
+
+    .contactInformation{
+        height:50px;
+    }
+
+    .contactsRightSectionShowProfilInner{
+        height:320px;
+    }
+}
+
+@media(max-width:550px){
+    .contactsRightSide{
+        left:20px;
+    }
+
+    .contactsRightSectionShowProfil{
+        left:20px;
+    }
+
+    .contactsHeadlineRightSection{
+        font-size:48px;
+    }
+
+    .contactsRightBetterWith{
+        font-size:22px;
+    }
+
+    .dialogRight{
+        width:366px;
+    }
+
+    .dialogLeft{
+        width:366px;
+        padding-top:45px;
+        padding-bottom:80px;
+        padding-left:0px;
+        padding-right:0px;
+        height:410px;
+    }
+
+    .dialogInputfieldDiv{
+        width:320px;
+        height:40px;
+        gap:0px;
+    }
+
+    .dialogNewContactDiv{
+        transform:translate(590px, -50%);
+    }
+
+    .dialogNewContactDiv.slide-in{
+        transform:translate(-185px, -65%)
+    }
+
+    .HeadlineDialog{
+        font-size:40px;
+    }
+
+    .subheadingDialog{
+        font-size:20px;
+        width:100%;
+    }
+
+    .dialogLeftInnerDiv{
+        padding-left:20px;
+    }
+
+    .subheadingDialog{
+        width:180px;
+    }
+
+    .dialogProfilPicture{
+        width:90px;
+        height:90px;
+        top:200px;
+    }
+
+    .contactsHeadlineAndLeftIconDiv{
+        width:90vw;
+    }
+
+    .circleProfilPicShowEdit{
+        position:absolute;
+        top:175px;
+    }
+
+    .cancelButtonEdit{
+        width:90px;
+    }
+
+    .createContactButton{
+        width:170px;
+    }
+
+    .closeResponsiveButton{
+        display:block;
+        position: absolute;
+        top: 25px;
+        left: 330px;
+    }
+}
+
+@media(max-width:400px){
+    .dialogLeft{
+        width:300px;
+    }
+
+    .dialogRight{
+        width:300px;
+        height:420px;
+    }
+
+    .dialogInputfieldDiv{
+        width:280px;
+        height:35px;
+    }
+
+    .dialogIcons{
+        width:20px;
+        height:18px;
+    }
+
+    .dialogInputfield{
+        width:300px;
+    }
+
+    .createContactButton{
+        width:170px;
+    }
+
+    .dialogButtonDiv{
+        width:300px;
+    }
+
+    .crreateContactButton{
+        width:175px;
+    }
+
+    .dialogNewContactDiv{
+        transform:translate(590px, -50%);
+    }
+
+    .dialogNewContactDiv.slide-in{
+        transform:translate(-150px, -65%)
+    }
+
+    .dialogProfilPictureDiv{
+        height:415px;
+    }
+
+    .closeResponsiveButton{
+        left:270px;
+    }
+}
