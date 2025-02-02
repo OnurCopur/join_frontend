@@ -29,6 +29,32 @@ async function loadDataLogin() {
 }
 
 
+async function guestLogin() {
+    try {
+        // Anfrage an den Backend-Endpoint für den Gast-Login
+        let response = await fetch(BASE_URL + 'auth/guest-login/', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            }
+        });
+
+        if (response.ok) {
+            let data = await response.json();
+            localStorage.setItem('token', data.token);  // Token im LocalStorage speichern
+            sessionStorage.setItem('loggedInUser', 'Guest');  // Gast-Benutzernamen speichern
+            redirectToSummary();  // Weiterleitung zur Zusammenfassung
+        } else {
+            console.error('Error logging in as guest');
+        }
+    } catch (error) {
+        console.error('Error logging in as guest:', error);
+    }
+}
+
+
+
+
 async function loadData() {
     const token = localStorage.getItem('token'); // Token aus dem LocalStorage abrufen
 
